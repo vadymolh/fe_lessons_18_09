@@ -3,7 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Відправка форм</title>
   </head>
-  <body></body>
+  <body>
+    <a href="https://facebook.com/***" target="_blank">facebook</a>
+    <br /><br />
+    <!-- Типи полів форми  ?param1=value&param2=value  -->
+    <!--  
+    <form action="index.html" method="GET">
+      <input type="text" name="username" />
+      <input type="checkbox" name="check1" value="op1" />option1
+      <input type="checkbox" name="check2" value="op2" />option2
+      <input type="checkbox" name="check3" value="op3" />option3
+      <br />
+      <input type="radio" name="group1" />
+      <input type="radio" name="group1" />
+      <input type="radio" name="group1" />
+      <br />
+      <input type="password" name="psw" id="psw1" maxlength="5" />
+      <br />
+      <input type="email" name="email" id="em1" />
+      <br />
+      <input type="color" />
+      <input type="hidden" name="token" value="token_%4sudfiu" />
+      <br />
+      0<input type="range" name="range1" id="range1" min="0" max="90" />90
+      <input type="file" />
+      <br>
+      <input type="date" name="date1" id="date1">
+      <input type="submit" value="Submit" />
+    </form>-->
+
+    <!-- placeholder та Групування полів -->
+    <!--  
+    <form action="https://fom.in.ua/echo" method="POST">
+      <div>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="image"
+          src="./img/search.png"
+          alt="search icon"
+          width="17"
+        />
+      </div>
+
+      <p>
+        <label for="pwd">Password</label>
+        <input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="Пароль"
+          maxlength="15"
+          required
+        />
+      </p>
+      <input type="submit" value="Залогінитись" />
+      <input type="reset" value="reset" />
+    </form>-->
+
+    <!-- File upload -->
+    <!--  
+    <form action="https://fom.in.ua/echo" method="POST">
+      <input
+        type="file"
+        name="upload"
+        id="upload"
+        multiple
+        accept="image/*,.pdf"
+      />
+      <p>
+        <input
+          type="range"
+          name="r1"
+          id="r1"
+          min="0"
+          max="100"
+          step="10"
+          value="20"
+        />
+      </p>
+      <input type="submit" value="Upload" />
+    </form>-->
+
+    <!-- Datalist -->
+    <!--  
+    <form action="https://fom.in.ua/echo" method="post">
+      <label for="fav_color">Оберіть колір</label>
+      <input
+        type="color"
+        name="color"
+        id="fav_color"
+        list="colors"
+        value="#00Ff00"
+      />
+      <input type="color" name="c2" id="c2" value="#00Ff00" />
+      <datalist id="colors">
+        <option value="#ff0000" label="RED"></option>
+        <option value="#ffdddd" label="RED2"></option>
+        <option value="#ff8888" label="RED3"></option>
+      </datalist>
+    </form>-->
+
+    <!--  
+    <form action="https://fom.in.ua/echo" method="post">
+      <fieldset>
+        <legend>Ми вивчаємо, обирайте</legend>
+        <input type="radio" name="tech" id="html" /> HTML
+        <br />
+        <input type="radio" name="tech" id="js" /> JS
+        <br />
+        <input type="radio" name="tech" id="nodejs" />NodeJS
+        <br />
+        <input type="radio" name="tech" id="react" />React
+      </fieldset>
+      <div>
+        <button type="submit">Обрати</button>
+      </div>
+    </form> -->
+
+    <!-- TEXTAREA -->
+    <!--  
+    <form action="https://fom.in.ua/echo">
+      <textarea
+        name="comment"
+        id="comment"
+        cols="30"
+        rows="10"
+        maxlength="200"
+        style="resize: none"
+      ></textarea>
+    </form>-->
+
+    <!-- Select -->
+    <!--  
+    <form action="index.html" novalidate>
+      <label for="city">Your city</label>
+      <select name="city" id="city">
+        <option value="-" disabled>Виберіть ваше місто</option>
+        <option value="Dnipro">Дніпро</option>
+        <option value="Rivne">Рівне</option>
+        <option value="Kharkiv">Kharkiv</option>
+        <option value="Kyiv">Київ</option>
+        <option value="Kyiv">Київ</option>
+      </select>
+    </form>-->
+
+    <!-- Валідація числових полів -->
+    <form action="index.html">
+      <div>
+        <label for="age">Вік</label>
+        <input
+          type="number"
+          step="1"
+          min="0"
+          max="129"
+          value="16"
+          id="age"
+          name="age"
+        />
+      </div>
+      <div>
+        <input type="text" name="name" id="name" autocomplete autofocus />
+      </div>
+    </form>
+  </body>
 </html>
