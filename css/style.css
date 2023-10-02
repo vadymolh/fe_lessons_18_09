@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.white-text {
+  color: white;
+}
+div.cover {
+  max-width: 90%;
+  /* width: 90vw; */
+  aspect-ratio: 16 / 9;
+  border: 2px solid black;
+  background-image: url("../img/flowers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: blueviolet;
+}
+
+div.demo {
+  padding: 40px;
+  margin: 30px;
+  border: 5px solid black;
+  background-color: rgba(234, 210, 122, 0.3);
+}
+
+div.color {
+  width: 30vw;
+  height: 15vh;
+  border: 5px solid black;
+  color: #fa9; /* RGB  #ffaa99*/
+  color: rgb(255, 0, 200);
+  color: white;
+  background-color: rgba(255, 0, 200, 0.3);
+  background-color: hsl(254, 39%, 48%);
+  padding: 40px;
+  margin: 30px;
+  padding-left: 50px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  /* border: 3px rgb(25, 9, 6) dashed; */
+  /* border-radius: 30px 60px 100px 0px; */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 40px 0px;
+  border: 1px rgb(25, 9, 6) solid;
+  border-radius: 3px;
+}
+
+.card {
+  border: 1px rgb(25, 9, 6) solid;
+  border-radius: 3px;
+  box-shadow: 15px -15px 2px 3px #fa9;
+}
+.wrapper img {
+  max-width: 100%;
+}
+
+li:first-child {
+  background-color: rgb(240, 51, 51);
+}
+
+li:nth-child(5) {
+  background-color: green;
+}
