@@ -1,0 +1,17 @@
+@media screen and (max-width: 420px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-row > input {
+    flex-grow: 3;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .form-row > input {
+    flex-grow: 4;
+  }
+}
