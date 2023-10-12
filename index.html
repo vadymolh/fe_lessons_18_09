@@ -11,12 +11,20 @@
     />-->
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Bootstrap lesson</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <nav
+      id="menu"
+      class="navbar navbar-dark fixed-top bg-dark navbar-expand-lg"
+    >
       <div class="container">
         <a href="#" class="navbar-brand">FrontEnd Bootstrap</a>
         <button
@@ -36,13 +44,14 @@
               <a href="#question" class="nav-link">Питання відповіді</a>
             </li>
             <li class="nav-item">
-              <a href="#instr" class="nav-link">Інструкції</a>
+              <a href="#instructors" class="nav-link">Інструкції</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <section class="bg-dark text-light">
+
+    <section class="bg-dark text-light mt-5">
       <div class="container">
         <div
           class="d-flex flex-column flex-md-row align-items-center justify-content-between"
@@ -68,15 +77,13 @@
 
     <section class="bg-primary text-light p-5">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <h3 class="mb-3 mb-lg-0">Підпишіться на наші оновлення:</h3>
-          <div class="input-group">
+        <div class="d-lg-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mx-1 mb-lg-0">Підпишіться на наші новини:</h3>
+          <div class="input-group input-news mx-1">
             <input
               type="email"
               class="form-control"
               placeholder="Enter your Email here..."
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
             />
             <button class="btn btn-dark btn-lg">Submit</button>
           </div>
@@ -84,37 +91,335 @@
       </div>
     </section>
 
-    <section class="p-5 bg-light">
+    <section id="rect_apps" class="p-5 bg-light">
       <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-3 col-6">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-              repellendus.
-            </p>
+        <div class="row text-center g-4">
+          <div class="col-lg d-flex align-items-stretch">
+            <div class="card bg-dark text-light">
+              <div class="card-body d-flex flex-column text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-filetype-jsx"></i>
+                </div>
+
+                <h3 class="card-title mb-3">React додатки</h3>
+                <p class="card-text lead">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Eligendi repellendus nesciunt natus porro doloremque?
+                </p>
+                <a href="#" class="btn btn-primary mt-auto align-self-center"
+                  >Читати більше</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3 col-6">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-              repellendus.
-            </p>
+          <div class="col-lg d-flex align-items-stretch">
+            <div class="card bg-dark text-light">
+              <div class="card-body d-flex flex-column text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-filetype-html"></i>
+                </div>
+
+                <h3 class="card-title">HTML верстка</h3>
+                <p class="card-text lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                  velit reprehenderit repudiandae modi soluta.
+                </p>
+                <a href="#" class="btn btn-primary mt-auto align-self-center"
+                  >Читати більше</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3 col-6">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-              repellendus.
-            </p>
+          <div class="col-lg d-flex align-items-stretch">
+            <div class="card bg-dark text-light">
+              <div class="card-body d-flex flex-column text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-motherboard"></i>
+                </div>
+                <h3 class="card-title">Computer Science</h3>
+                <p class="card-text lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                  velit reprehenderit repudiandae modi soluta. ehenderit
+                  repudiandae modi soluta. ehenderit repudiandae modi soluta.
+                </p>
+                <a href="#" class="btn btn-primary mt-auto align-self-center"
+                  >Читати більше</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3 col-6">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-              repellendus.
+        </div>
+      </div>
+    </section>
+    <div></div>
+
+    <div
+      class="scrollspy-example"
+      data-bs-spy="scroll"
+      data-bs-target="#menu"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+    >
+      <section id="learn" class="p-5">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg">
+              <img
+                src="./img/fundamentals.png"
+                alt="HTML picture"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-lg p5">
+              <h2>Вивчай основи WEB</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                earum excepturi facilis officiis labore voluptatum sapiente rem
+                repellat aliquid! Magni.
+              </p>
+              <a href="#" class="btn btn-dark mt-3">
+                <i class="bi bi-chevron-compact-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="p5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg p5">
+            <h2>Вивчай основи WEB</h2>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              earum excepturi facilis officiis labore voluptatum sapiente rem
+              repellat aliquid! Magni.
             </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-compact-right"></i>
+            </a>
+          </div>
+          <div class="col-lg">
+            <img src="./img/react.png" alt="React picture" class="img-fluid" />
           </div>
         </div>
       </div>
     </section>
 
+    <div
+      class="scrollspy-example"
+      data-bs-spy="scroll"
+      data-bs-target="#menu"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+    >
+      <section id="question" class="p-5">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Де ви знаходитесь?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Ми знаходимось у місті Умань вулиця Центральна 39
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Скільки вартує навчання?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                В залежності від обраного напрямку
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Що потрібно знати щоб почати у вас навчання?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                У нас ж курси для які підійдуть будь якому рівню підготовки
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div
+      class="scrollspy-example"
+      data-bs-spy="scroll"
+      data-bs-target="#menu"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+    >
+      <section id="instructors" class="p5 bg-primary">
+        <div class="container py-5">
+          <h2 class="text-white text-center mb-3">Наші інструктори</h2>
+          <div class="row row-cols-lg-4 row-cols-sm-2 g-lg-4 g-md-2">
+            <div class="col">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/med/men/75.jpg"
+                    alt="avatar"
+                    class="rounded-circle mb-3"
+                  />
+                  <h3 class="card-title mb-2">Jack Konor</h3>
+                  <p class="card-subtitle">Instructor</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eligendi, et.
+                  </p>
+                  <a href="#" class="m-1"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-google"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/med/men/81.jpg"
+                    alt="avatar"
+                    class="rounded-circle mb-3"
+                  />
+                  <h3 class="card-title mb-2">Jack Neo</h3>
+                  <p class="card-subtitle">Manager</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eligendi, et.
+                  </p>
+                  <a href="#" class="m-1"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-google"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/med/men/7.jpg"
+                    alt="avatar"
+                    class="rounded-circle mb-3"
+                  />
+                  <h3 class="card-title mb-2">Bob Konor</h3>
+                  <p class="card-subtitle">Instructor</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eligendi, et.
+                  </p>
+                  <a href="#" class="m-1"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-google"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/med/women/79.jpg"
+                    alt="avatar"
+                    class="rounded-circle mb-3"
+                  />
+                  <h3 class="card-title mb-2">Jackie Konor</h3>
+                  <p class="card-subtitle">Instructor</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eligendi, et.
+                  </p>
+                  <a href="#" class="m-1"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="m-1"><i class="bi bi-google"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="p-5">
+      <div class="conteiner">
+        <div class="row g-4">
+          <div class="col-lg">
+            <h2 class="text-center mb-4">Контакти:</h2>
+            <ul class="list-group-flush">
+              <li class="list-group-item">
+                <span class="fw-bold">Телефон для довідок:</span> +3098872672367
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Адреса:</span> Умань, вул. Центральна 39
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Email:</span> mailme@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26657.297412143715!2d32.03787599401685!3d49.44097715707749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14c9dbf9b7861%3A0xbc334d7c335631fe!2z0JTQvtC70LjQvdCwINCi0YDQvtGP0L3QtA!5e0!3m2!1suk!2sua!4v1697130199165!5m2!1suk!2sua"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
