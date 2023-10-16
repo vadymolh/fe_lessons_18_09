@@ -1,0 +1,48 @@
+body,
+html {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 50px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: minmax(30px, 100px) 70vh 15vh;
+  grid-auto-rows: 20vh;
+  grid-template-areas:
+    "header header header header"
+    "aside . . main"
+    "footer footer footer footer";
+}
+
+.header {
+  background-color: goldenrod;
+  padding: 30px;
+  text-align: center;
+  grid-area: header;
+  color: #fff;
+}
+
+.main {
+  background-color: rgb(9, 73, 72);
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  grid-area: main;
+}
+
+.aside {
+  background-color: rgb(2, 54, 72);
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  grid-area: aside;
+}
+
+.footer {
+  background-color: rgb(42, 54, 3);
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  grid-area: footer;
+}

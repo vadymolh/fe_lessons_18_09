@@ -1,0 +1,10 @@
+@media screen and (max-width: 720px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+  }
+}
