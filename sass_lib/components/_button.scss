@@ -1,0 +1,29 @@
+@mixin btn($bg-color: #e2e2e2) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: $base-padding $base-padding * 2;
+  border-radius: $base-border-radius;
+  background-color: $bg-color;
+}
+
+.btn {
+  @include btn;
+}
+
+// button with custom background
+@each $key, $value in $colors {
+  .btn-#{$key} {
+    @include btn($value);
+
+    //if statement
+    @if ($value == #000) {
+      color: map-get($colors, "white");
+    }
+
+    &:hover {
+      background-color: lighten($value, 10);
+    }
+  }
+}
