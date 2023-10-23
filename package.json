@@ -1,0 +1,19 @@
+{
+  "name": "fe_lessons_18_09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vadym_VV",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-purgecss": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.4"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

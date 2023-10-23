@@ -1,0 +1,38 @@
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $x in $spaceamounts {
+  // "m-2" "m-3"
+  .m-#{$x} {
+    margin: $x * $base-margin;
+  }
+
+  .mx-#{$x} {
+    margin: 0 $x * $base-margin;
+  }
+
+  .my-#{$x} {
+    margin: $x * $base-margin 0;
+  }
+  .ml-#{$x} {
+    margin-left: $x * $base-margin;
+  }
+  .mr-#{$x} {
+    margin-right: $x * $base-margin;
+  }
+
+  .p-#{$x} {
+    padding: $x * $base-margin;
+  }
+  .px-#{$x} {
+    padding: 0 $x * $base-margin;
+  }
+  .py-#{$x} {
+    padding: $x * $base-margin 0;
+  }
+  .pl-#{$x} {
+    padding-left: $x * $base-margin;
+  }
+  .pr-#{$x} {
+    padding-right: $x * $base-margin;
+  }
+}

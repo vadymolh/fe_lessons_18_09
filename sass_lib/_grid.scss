@@ -1,0 +1,63 @@
+@use "sass:math";
+$grid-columns: 12;
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+//
+//
+//
+//
+//
+
+$grid-gaps: (
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+  "4": 40px,
+);
+@each $key, $val in $grid-gaps {
+  .gap-#{$key} > * {
+    padding: $val;
+  }
+}
+
+//  col-1-sm .. col-12-sm , col-3-lg
+@mixin col-mixin($n: 12) {
+  box-sizing: border-box;
+  flex-grow: 0;
+  width: math.div($n * 100%, $grid-columns);
+}
+
+@include sm {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-sm {
+      @include col-mixin($i);
+    }
+  }
+}
+
+@include md {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-md {
+      @include col-mixin($i);
+    }
+  }
+}
+
+@include lg {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-lg {
+      @include col-mixin($i);
+    }
+  }
+}
+
+@include xl {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xl {
+      @include col-mixin($i);
+    }
+  }
+}

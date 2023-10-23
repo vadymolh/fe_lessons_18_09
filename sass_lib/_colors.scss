@@ -17,7 +17,7 @@
   @for $i from 1 through 9 {
     //"bg-orange-light-3"
     .bg-#{$key}-light-#{$i} {
-      background-color: mix(white, $val, $i * 10);
+      background-color: mix(white, $val, $i * 10%);
     }
   }
 }

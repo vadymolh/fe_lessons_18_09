@@ -1,12 +1,16 @@
 // variables & functions
 @import "variables";
+@import "breakpoints";
 
 @import "utils";
 // base layouts
 @import "base";
+@import "grid";
 
 //color classes
 @import "colors";
 
 //components (cards, btn, nav )
 @import "components/button";
+@import "components/card";
+@import "spaces";

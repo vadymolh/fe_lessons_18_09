@@ -16,7 +16,11 @@
 @each $key, $value in $colors {
   .btn-#{$key} {
     @include btn($value);
-
+    //media query for larger screens via mixin
+    @include sm {
+      padding: $base-padding * 1.5 $base-padding * 3;
+      font-size: $font-size-lg;
+    }
     //if statement
     @if ($value == #000) {
       color: map-get($colors, "white");

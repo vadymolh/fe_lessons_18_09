@@ -9,6 +9,12 @@
 body {
   background-color: $primary;
   font-family: "Poppins";
+  @include sm {
+    background-color: beige;
+  }
+  @include custom_brk_point(600px) {
+    background-color: rgb(141, 222, 235);
+  }
 }
 
 .test-bg-red {
