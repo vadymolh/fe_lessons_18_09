@@ -11,7 +11,7 @@ $spaceamounts: (1, 2, 3, 4, 5);
   }
 
   .my-#{$x} {
-    margin: $x * $base-margin 0;
+    margin: $x * $base-margin auto;
   }
   .ml-#{$x} {
     margin-left: $x * $base-margin;

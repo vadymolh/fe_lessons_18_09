@@ -8,6 +8,8 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -19,7 +21,6 @@
 }
 
 body {
-  background-color: #326dee;
   font-family: "Poppins";
 }
 @media (min-width: 480px) {
@@ -53,6 +54,11 @@ a {
 
 .gap-2 > * {
   padding: 20px;
+}
+
+.gap-2 {
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 @media (min-width: 480px) {
@@ -249,8 +255,9 @@ a {
 .card {
   display: block;
   padding: 0.75rem;
+  background-color: #326dee;
   border-radius: 5px;
-  box-shadow: 1px 3px 5px rbga(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.2);
   border: 2px solid #000;
 }
 .card .card-title {
@@ -270,5 +277,5 @@ a {
 }
 
 .my-5 {
-  margin: 3.75rem 0;
+  margin: 3.75rem auto;
 }

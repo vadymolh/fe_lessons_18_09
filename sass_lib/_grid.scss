@@ -21,6 +21,10 @@ $grid-gaps: (
   .gap-#{$key} > * {
     padding: $val;
   }
+  .gap-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+  }
 }
 
 //  col-1-sm .. col-12-sm , col-3-lg
