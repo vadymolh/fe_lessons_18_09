@@ -3,3 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: bisque;
+  line-height: 1.5;
+}
+header {
+  background-color: burlywood;
+  color: azure;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px #000 solid;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.par2-newcolor {
+  color: chocolate;
+  background-color: darkgrey;
+}
