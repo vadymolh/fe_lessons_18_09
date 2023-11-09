@@ -31,3 +31,19 @@ header {
   margin: auto;
   padding: 10px;
 }
+
+.box {
+  background-color: rgb(150, 104, 40);
+  color: #fff;
+  width: 500px;
+  height: 100px;
+  padding: 20px;
+  text-align: center;
+}
+
+.animated {
+  background: brown;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}

@@ -3,18 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM Arrays</title>
+    <title>DOM AJAX</title>
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   </head>
 
   <body>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut modi
-      consectetur omnis veritatis quia nemo debitis quos reprehenderit minus
-      iste repellat soluta vel exercitationem autem, aliquid facilis unde
-      architecto similique.
-    </p>
+    <header>jQuery Ajax</header>
+    <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+      <input type="text" id="title" placeholder="Title" /><br />
+      <textarea name="body" id="body" cols="20" rows="3"></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+    <div class="container">
+      <div id="result"></div>
+    </div>
 
-    <script src="./js/arraysDOM.js"></script>
+    <script src="./js/AjaxApp.js"></script>
   </body>
 </html>
