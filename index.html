@@ -3,17 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Traveling the Globe</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   </head>
 
   <body>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut modi
-      consectetur omnis veritatis quia nemo debitis quos reprehenderit minus
-      iste repellat soluta vel exercitationem autem, aliquid facilis unde
-      architecto similique.
-    </p>
+    <div class="container mt-4">
+      <h1 class="text-center">
+        <i class="bi bi-globe-americas mx-3"></i>Куди я хотів би подорожувати
+      </h1>
+      <form id="search-country" class="my-5">
+        <div class="form-group my-3">
+          <label for="country-name">Назва країни</label>
+          <input type="text" id="country-name" />
+        </div>
+        <input type="submit" class="form-control" value="Додати до бажаних" />
+      </form>
 
-    <script src="./js/app.js"></script>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flag</th>
+            <th>Name</th>
+            <th>Capital</th>
+            <th>Area sq. km</th>
+          </tr>
+        </thead>
+        <tbody id="country-list"></tbody>
+      </table>
+    </div>
+
+    <script src="./js/storageAPP.js"></script>
   </body>
 </html>
