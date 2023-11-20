@@ -3,17 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Alarm Clock</title>
   </head>
 
   <body>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut modi
-      consectetur omnis veritatis quia nemo debitis quos reprehenderit minus
-      iste repellat soluta vel exercitationem autem, aliquid facilis unde
-      architecto similique.
-    </p>
+    <!-- <div class="progress">content</div> -->
+    <div class="container">
+      <img src="./files/clock.jpg" alt="Clock" />
+      <h1 id="current-time">00: 00 PM</h1>
+      <div class="clock-settings">
+        <div class="column">
+          <select>
+            <option value="Hour">Години</option>
+          </select>
+        </div>
+        <div class="column">
+          <select>
+            <option value="Minutes">Хвилини</option>
+          </select>
+        </div>
+        <div class="column">
+          <select>
+            <option value="AM/PM">AM/PM</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+      <button id="btn-alarm">Встановити будильник</button>
+    </div>
 
-    <script src="./js/app.js"></script>
+    <script src="./js/alarmClock.js"></script>
   </body>
 </html>
