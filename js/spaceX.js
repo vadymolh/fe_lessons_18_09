@@ -13,11 +13,12 @@ fetch(url)
     <div class="col-md-6 col-lg-3">
       <div class="card bg-light">
         <div class="card-body">
-          <img src="${image}" alt="" class="rounded-circle" />
+           <p>Element</p>
+          <img src="${image}" alt="" class="rounded-circle img-thumbnail" />
         </div>
       </div>
     </div>
   `;
-      div.insertAdjacentHTML("beforeend", html);
+      div.firstElementChild.insertAdjacentHTML("afterend", html);
     });
   });
