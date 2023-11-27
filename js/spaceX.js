@@ -14,7 +14,7 @@ fetch(url)
       <div class="card bg-light">
         <div class="card-body">
            <p>Element</p>
-          <img src="${image}" alt="" class="rounded-circle img-thumbnail" />
+          <img src="${image}" alt="" class="rounded-circle img-thumbnail" width=300 height=300 "/>
         </div>
       </div>
     </div>
