@@ -39,8 +39,8 @@ arrowLeft.addEventListener("mouseover", overLeftArrow);
 arrowLeft.addEventListener("mouseout", outLeftArrow);
 
 function hideToggle(arrowRed, arrowWhite) {
-  arrowWhite.classList.toggle = "hide";
-  arrowRed.classList.toggle = "hide";
+  arrowWhite.classList.toggle("hide");
+  arrowRed.classList.toggle("hide");
 }
 
 function overRightArrow(e) {
@@ -66,7 +66,7 @@ function outRightArrow(e) {
 
 function outLeftArrow(e) {
   if ((e.target.tagName = "img")) {
-    arrowRight.style.background = "#fff";
+    arrowLeft.style.background = "#fff";
     hideToggle(arrowRedLeft, arrowWhiteLeft);
   }
 }
@@ -76,16 +76,22 @@ function goLeft() {
   reset();
   let tmp = order - 1;
   tmp = tmp.toString();
-  sliders[current].style.order = tmp;
-  if (current == 0) {
-    for (let i = 0; i < sliders.length; i++) {
-      sliders[i].style.order = "1";
-    }
-    current = 1;
+  //sliders[current].style.order = tmp;
+  for (let i = 0; i < sliders.length; i++) {
+    console.log(sliders[i].style.order);
+    sliders[i].style.order = i.toString();
+  }
+  if (current === 0) {
+    sliders[current].style.order = sliders.length.toString();
+
+    current = sliders.length - 1;
+    sliders[current].style.order = tmp;
+    console.log(sliders.length - 1);
     slidesContent[current].classList.add("active-slide");
     points[current].classList.add("active-point");
   } else {
     current--;
+    sliders[current].style.order = "-1";
     slidesContent[current].classList.add("active-slide");
     points[current].classList.add("active-point");
   }
