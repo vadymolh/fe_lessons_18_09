@@ -4,10 +4,172 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Alarm Clock</title>
+    <title>Slider carousel</title>
   </head>
 
   <body>
-    <script src="./js/app.js"></script>
+    <section>
+      <div class="container">
+        <div class="text">
+          <h2>Trusted by Thousands of Happy Customer</h2>
+          <p>
+            These are the stories of our customers who have joined us with great
+            pleasure when using this crazy feature.
+          </p>
+        </div>
+        <div class="slider">
+          <div class="slide slide1">
+            <div class="slider-content">
+              <div class="slide-person">
+                <div class="person">
+                  <img
+                    src="./img/avatars/man1.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="information">
+                    <p class="ps name">Viezh Robert</p>
+                    <p class="ps city">Warsaw, Poland</p>
+                  </div>
+                </div>
+                <div class="rate">
+                  <img src="img/icons/star.svg" alt="rating Star" />
+                  <p class="ps">4.5</p>
+                </div>
+              </div>
+
+              <div class="feedback">
+                <p>
+                  “Wow... I am very happy to use this VPN, it turned out to be
+                  more than my expectations and so far there have been no
+                  problems. LaslesVPN always the best”.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide2">
+            <div class="slider-content">
+              <div class="slide-person">
+                <div class="person">
+                  <img
+                    src="./img/avatars/woman.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="information">
+                    <p class="ps name">Yessica Christy</p>
+                    <p class="ps city">Shanxi, China</p>
+                  </div>
+                </div>
+                <div class="rate">
+                  <img src="img/icons/star.svg" alt="rating Star" />
+                  <p class="ps">4.0</p>
+                </div>
+              </div>
+
+              <div class="feedback">
+                <p>
+                  “I like it because I like to travel far and still can connect
+                  with high speed.”.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide3">
+            <div class="slider-content">
+              <div class="slide-person">
+                <div class="person">
+                  <img
+                    src="./img/avatars/man2.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="information">
+                    <p class="ps name">Kim Young Jou</p>
+                    <p class="ps city">Seoul, South Korea</p>
+                  </div>
+                </div>
+                <div class="rate">
+                  <img src="img/icons/star.svg" alt="rating Star" />
+                  <p class="ps">3.0</p>
+                </div>
+              </div>
+
+              <div class="feedback">
+                <p>
+                  “This is very unusual for my business that currently requires
+                  a virtual private network that has high security.”.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide4">
+            <div class="slider-content">
+              <div class="slide-person">
+                <div class="person">
+                  <img
+                    src="./img/avatars/woman2.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="information">
+                    <p class="ps name">Jessica Cao</p>
+                    <p class="ps city">Rio de Janeiro, Brasil</p>
+                  </div>
+                </div>
+                <div class="rate">
+                  <img src="img/icons/star.svg" alt="rating Star" />
+                  <p class="ps">4.3</p>
+                </div>
+              </div>
+
+              <div class="feedback">
+                <p>
+                  “This is very unusual for my business that currently requires
+                  a virtual private network that has high security.This is very
+                  unusual for my business that currently requires a virtual
+                  private network that has high security.”.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control-slider">
+          <div class="points">
+            <button class="point"></button>
+            <button class="point"></button>
+            <button class="point"></button>
+            <button class="point"></button>
+          </div>
+        </div>
+        <div class="arrows">
+          <button class="arrow" id="arrow-left">
+            <img
+              src="./img/icons/arrowRedLeft.png"
+              alt="slide Navigation left"
+              class="arrow-red-left"
+            />
+            <img
+              src="./img/icons/arrowWhiteLeft.png"
+              alt="slide Navigation left"
+              class="arrow-white-left hide"
+            />
+          </button>
+          <button class="arrow" id="arrow-right">
+            <img
+              src="./img/icons/arrowRedRight.png"
+              alt="slide Navigation right"
+              class="arrow-red-right"
+            />
+            <img
+              src="./img/icons/arrowWhiteRight.png"
+              alt="slide Navigation right"
+              class="arrow-white-right hide"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="./js/slider.js"></script>
   </body>
 </html>
