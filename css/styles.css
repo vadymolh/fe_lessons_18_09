@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#myCanvas {
+  background-color: #eee;
+  border: 1px solid #000;
+  margin: 100px;
+}
