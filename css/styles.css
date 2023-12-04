@@ -79,6 +79,7 @@
   border-radius: 7.5px;
   margin-right: 10px;
   border: 0px;
+  transition: all 0.3s linear;
 }
 
 .arrows {
@@ -94,6 +95,7 @@
   height: 60px;
   border: 2px solid #f53838;
   background-color: #fff;
+  transition: all 0.15s linear;
 }
 
 .name {
@@ -113,6 +115,16 @@
 
 .active-slide {
   border: 2px solid #f53838;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .active-point {

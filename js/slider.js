@@ -13,8 +13,49 @@ let arrowRedRight = document.querySelector(".arrow-red-right");
 let arrowWhiteRight = document.querySelector(".arrow-white-right");
 //---------------------------------------------
 
+let orderArray = Array.from(sliders);
+let last = orderArray.length - 1;
 let current = 0,
   order = 0;
+
+function redoOrder(a) {
+  for (let i = 0; i <= last; i++) {
+    sliders[i].style.order = orderArray.indexOf(sliders[i]);
+  }
+}
+
+function highlightCurrent() {
+  slidesContent[current].classList.add("active-slide");
+  points[current].classList.add("active-point");
+}
+
+function goRight() {
+  reset();
+  let previous = orderArray.shift();
+  orderArray.push(previous);
+  redoOrder(orderArray);
+  if (current === last) {
+    current = 0;
+    highlightCurrent();
+    return;
+  }
+  current++;
+  highlightCurrent();
+}
+
+function goLeft() {
+  reset();
+  let previous = orderArray.pop();
+  orderArray.unshift(previous);
+  redoOrder(orderArray);
+  if (current === 0) {
+    current = last;
+    highlightCurrent();
+    return;
+  }
+  current--;
+  highlightCurrent();
+}
 
 function reset() {
   for (let i = 0; i < sliders.length; i++) {
@@ -72,32 +113,33 @@ function outLeftArrow(e) {
 }
 
 //-----------------------------------------------------
-function goLeft() {
-  reset();
-  let tmp = order - 1;
-  tmp = tmp.toString();
-  //sliders[current].style.order = tmp;
-  for (let i = 0; i < sliders.length; i++) {
-    console.log(sliders[i].style.order);
-    sliders[i].style.order = i.toString();
-  }
-  if (current === 0) {
-    sliders[current].style.order = sliders.length.toString();
+// function goLeft() {
+//   reset();
+//   let tmp = order - 1;
+//   tmp = tmp.toString();
+//   //sliders[current].style.order = tmp;
+//   for (let i = 0; i < sliders.length; i++) {
+//     console.log(sliders[i].style.order);
+//     sliders[i].style.order = i.toString();
+//   }
+//   if (current === 0) {
+//     sliders[current].style.order = sliders.length.toString();
 
-    current = sliders.length - 1;
-    sliders[current].style.order = tmp;
-    console.log(sliders.length - 1);
-    slidesContent[current].classList.add("active-slide");
-    points[current].classList.add("active-point");
-  } else {
-    current--;
-    sliders[current].style.order = "-1";
-    slidesContent[current].classList.add("active-slide");
-    points[current].classList.add("active-point");
-  }
-}
+//     current = sliders.length - 1;
+//     sliders[current].style.order = tmp;
+//     console.log(sliders.length - 1);
+//     slidesContent[current].classList.add("active-slide");
+//     points[current].classList.add("active-point");
+//   } else {
+//     current--;
+//     sliders[current].style.order = "-1";
+//     slidesContent[current].classList.add("active-slide");
+//     points[current].classList.add("active-point");
+//   }
+// }
 
 arrowLeft.addEventListener("click", goLeft);
+arrowRight.addEventListener("click", goRight);
 
 //Points LOGIC//////////////////////////////////////////
 
@@ -110,16 +152,18 @@ function pointSlide(e) {
     return;
   }
   reset();
-  points[index].classList.add("active-point");
-  for (let i = 0; i < sliders.length; i++) {
-    if (i === index) {
-      slidesContent[i].classList.add("active-slide");
-      sliders[i].style.order = order.toString();
-    } else if (i > index) {
-      sliders[i].style.order = order.toString();
-    } else {
-      sliders[i].style.order = order.toString() + 1;
-    }
+
+  let tmp_slides = Array.from(sliders);
+  if (index !== 0) {
+    let tail = tmp_slides.splice(0, index);
+    orderArray = [...tmp_slides, ...tail];
+    console.log(orderArray);
+  } else {
+    orderArray = tmp_slides;
   }
+
+  current = index;
+  highlightCurrent();
+  redoOrder(orderArray);
 }
 //----------------------------------------------
